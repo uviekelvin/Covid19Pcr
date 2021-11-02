@@ -8,4 +8,8 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Covid19Pcr.Common\Covid19Pcr.Common.csproj" />
+  </ItemGroup>
+
 </Project>

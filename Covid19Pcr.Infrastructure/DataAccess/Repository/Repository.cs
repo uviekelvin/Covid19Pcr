@@ -63,6 +63,14 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
             return await query.FirstOrDefaultAsync(filter);
         }
 
+        public async Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await context.Set<TEntity>().Where(predicate).CountAsync();
+        }
+        public async Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await context.Set<TEntity>().Where(predicate).ToListAsync();
+        }
         public IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null)
         {
             IQueryable<TEntity> query = dbSet;
@@ -91,5 +99,7 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
 
             _disposed = true;
         }
+
+
     }
 }

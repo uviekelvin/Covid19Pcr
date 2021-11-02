@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Covid19Pcr.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]/[action]")]
     [ApiController]
-    public class TestsController : ControllerBase
+    public class TestsController : BaseController
     {
     }
 }
