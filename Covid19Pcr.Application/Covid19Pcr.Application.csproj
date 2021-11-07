@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -15,10 +15,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Covid19Pcr.Common\Covid19Pcr.Common.csproj" />
     <ProjectReference Include="..\Covid19Pcr.Domain\Covid19Pcr.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Queries\" />
   </ItemGroup>
 
 </Project>

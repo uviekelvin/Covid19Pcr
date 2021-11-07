@@ -51,7 +51,8 @@ namespace Covid19Pcr.Infrastructure.DataAccess.EntityConfigurations
                   Id=4,
                   TestDayId=3,
                   TestTypeId=1,
-                  PatientId=3                }
+                  PatientId=3
+                }
 
             });
 

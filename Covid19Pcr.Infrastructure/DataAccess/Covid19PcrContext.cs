@@ -15,7 +15,6 @@ namespace Covid19Pcr.Infrastructure.DataAccess
         public DbSet<Labs> Labs { get; set; }
         public DbSet<Locations> Locations { get; set; }
         public DbSet<TestDays> TestDays { get; set; }
-        public DbSet<TestResults> TestResults { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

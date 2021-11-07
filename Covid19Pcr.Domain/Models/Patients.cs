@@ -38,5 +38,14 @@ namespace Covid19Pcr.Domain.Models
             booking.Patient = this;
             this._bookings.Add(booking);
         }
+
+        public void CancelBooking(string bookingCode)
+        {
+            var booking = this.Bookings.FirstOrDefault(x => x.BookingCode == bookingCode);
+            if (booking == null)
+                throw new DomainException("Booking not found");
+            booking.CancelBooking();
+
+        }
     }
 }

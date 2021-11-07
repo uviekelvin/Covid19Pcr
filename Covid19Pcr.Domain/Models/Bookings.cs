@@ -22,7 +22,7 @@ namespace Covid19Pcr.Domain.Models
         public TestTypes TestType { get; set; }
         public TestDays TestDay { get; set; }
 
-        public TestResults TestResult { get; set; }
+        public TestResults TestResult { get; private set; }
 
         public Bookings()
         {
@@ -31,12 +31,13 @@ namespace Covid19Pcr.Domain.Models
 
         public Bookings(TestDays testDay, long testTypeId)
         {
-            if (this.TestDay.Date < DateTime.Now.Date)
-                throw new DomainException("Cannot Schduled booking in the past");
+            if (testDay.Date < DateTime.Now.Date)
+                throw new DomainException("Cannot Scheduled booking in the past");
             this.TestDayId = testDay.Id;
             this.TestDay = testDay;
             this.TestTypeId = testTypeId;
             this.BookingCode = Utility.GenerateRandomString(10, "1234567890");
+            this.Status = BookingStatus.Booked;
             this.TestDay.BookSpace();
             this.AddDomainEvent(new BookingCreatedDomainEvent
             {
@@ -49,9 +50,20 @@ namespace Covid19Pcr.Domain.Models
                 throw new DomainException("This booking cannot be cancelled");
             if (this.Status == BookingStatus.Cancelled)
                 throw new DomainException("Booking already cancelled");
+            this.Status = BookingStatus.Cancelled;
             this.TestDay.FreeSpace();
+            this.AddDomainEvent(new BookingCancelledDomainEvent { Booking = this });
         }
 
+        public void AddTestResult(LabResultTypes resultType, string remarks)
+        {
+            if (this.Status == BookingStatus.Cancelled || this.Status == BookingStatus.Completed)
+                throw new DomainException($"Test result cannot be added for a {this.Status} booking");
+            if (this.TestDay.Date.Date != DateTime.Now.Date)
+                throw new DomainException($"The scheduled test date is not the same as today");
+            this.TestResult = new TestResults(resultType, remarks);
+            this.TestDay.FreeSpace();
+        }
     }
 
 

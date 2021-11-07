@@ -28,9 +28,10 @@ namespace Covid19Pcr.API
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false)
                 .Build();
+                string logUrl = config.GetValue<string>("Seq:LogUrl");
                 var Logger = new LoggerConfiguration()
             .Enrich.WithProperty("Covid19Pcr", "Service")
-            .WriteTo.Seq(config.GetValue<string>("Seq:LogUrl"))
+            .WriteTo.Seq(logUrl)
             .CreateLogger();
                 var context = services.GetRequiredService<Covid19PcrContext>();
                 context.Database.Migrate();

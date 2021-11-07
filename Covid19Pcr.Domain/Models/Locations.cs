@@ -9,5 +9,9 @@ namespace Covid19Pcr.Domain.Models
     public class Locations : BaseEntity
     {
         public string Name { get; set; }
+
+        private List<Labs> _labs= new List<Labs>();
+
+        public IReadOnlyCollection<Labs> Labs => _labs;
     }
 }

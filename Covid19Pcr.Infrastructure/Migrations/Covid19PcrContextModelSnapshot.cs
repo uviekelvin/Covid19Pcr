@@ -71,9 +71,9 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            BookingCode = "0649346476",
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 422, DateTimeKind.Local).AddTicks(7973),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 424, DateTimeKind.Local).AddTicks(3313),
+                            BookingCode = "6978558196",
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 649, DateTimeKind.Local).AddTicks(5085),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 650, DateTimeKind.Local).AddTicks(9613),
                             IsDeleted = false,
                             PatientId = 1L,
                             Status = "0",
@@ -83,9 +83,9 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 2L,
-                            BookingCode = "7766935364",
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 447, DateTimeKind.Local).AddTicks(2550),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 447, DateTimeKind.Local).AddTicks(2582),
+                            BookingCode = "2673897780",
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 661, DateTimeKind.Local).AddTicks(140),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 661, DateTimeKind.Local).AddTicks(169),
                             IsDeleted = false,
                             PatientId = 2L,
                             Status = "0",
@@ -95,9 +95,9 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 3L,
-                            BookingCode = "4436818880",
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 447, DateTimeKind.Local).AddTicks(3624),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 447, DateTimeKind.Local).AddTicks(3629),
+                            BookingCode = "1641097345",
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 661, DateTimeKind.Local).AddTicks(965),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 661, DateTimeKind.Local).AddTicks(970),
                             IsDeleted = false,
                             PatientId = 2L,
                             Status = "0",
@@ -107,9 +107,9 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 4L,
-                            BookingCode = "9121366194",
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 447, DateTimeKind.Local).AddTicks(3668),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 447, DateTimeKind.Local).AddTicks(3671),
+                            BookingCode = "6900596816",
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 661, DateTimeKind.Local).AddTicks(1125),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 661, DateTimeKind.Local).AddTicks(1128),
                             IsDeleted = false,
                             PatientId = 3L,
                             Status = "0",
@@ -151,8 +151,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(3187),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(3213),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(3113),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(3145),
                             IsDeleted = false,
                             LocationId = 1L,
                             Name = "Malens Diagnostic Solutions"
@@ -160,8 +160,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 2L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4730),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4740),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4521),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4528),
                             IsDeleted = false,
                             LocationId = 1L,
                             Name = "African Biosciences Ltd"
@@ -169,8 +169,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 3L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4747),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4749),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4535),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4537),
                             IsDeleted = false,
                             LocationId = 1L,
                             Name = "Ice Field Industrial Ltd"
@@ -178,8 +178,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 4L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4753),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4755),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4541),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4543),
                             IsDeleted = false,
                             LocationId = 1L,
                             Name = "PathCare Laboratories"
@@ -187,8 +187,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 5L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4762),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4764),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4546),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4548),
                             IsDeleted = false,
                             LocationId = 1L,
                             Name = "Argon Laboratories Ltd"
@@ -196,8 +196,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 6L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4892),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4896),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4655),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4657),
                             IsDeleted = false,
                             LocationId = 2L,
                             Name = "Azzon Medicals and Diagnostics"
@@ -205,8 +205,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 7L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4900),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4902),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4661),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4663),
                             IsDeleted = false,
                             LocationId = 2L,
                             Name = "CrownChek Laboratories Ltd"
@@ -214,8 +214,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 8L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4905),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4907),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4666),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4668),
                             IsDeleted = false,
                             LocationId = 2L,
                             Name = "Europharm Laboratories"
@@ -223,8 +223,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 9L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4911),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 453, DateTimeKind.Local).AddTicks(4913),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4671),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 664, DateTimeKind.Local).AddTicks(4673),
                             IsDeleted = false,
                             LocationId = 2L,
                             Name = "Nero Medical Diagnostic Laboratory"
@@ -259,16 +259,16 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 454, DateTimeKind.Local).AddTicks(9625),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 454, DateTimeKind.Local).AddTicks(9655),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 665, DateTimeKind.Local).AddTicks(5298),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 665, DateTimeKind.Local).AddTicks(5316),
                             IsDeleted = false,
                             Name = "Lagos"
                         },
                         new
                         {
                             Id = 2L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 455, DateTimeKind.Local).AddTicks(410),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 455, DateTimeKind.Local).AddTicks(418),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 665, DateTimeKind.Local).AddTicks(6065),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 665, DateTimeKind.Local).AddTicks(6072),
                             IsDeleted = false,
                             Name = "Abuja"
                         });
@@ -316,8 +316,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 465, DateTimeKind.Local).AddTicks(6170),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 465, DateTimeKind.Local).AddTicks(6197),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 669, DateTimeKind.Local).AddTicks(1087),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 669, DateTimeKind.Local).AddTicks(1110),
                             Email = "uviekelvin@gmail.com",
                             FirstName = "Uvie",
                             IsDeleted = false,
@@ -327,8 +327,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 2L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 465, DateTimeKind.Local).AddTicks(8775),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 465, DateTimeKind.Local).AddTicks(8787),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 669, DateTimeKind.Local).AddTicks(4997),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 669, DateTimeKind.Local).AddTicks(5016),
                             Email = "kelvin.uvie@gmail.com",
                             FirstName = "Kelvin",
                             IsDeleted = false,
@@ -338,8 +338,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 3L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 465, DateTimeKind.Local).AddTicks(8794),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 465, DateTimeKind.Local).AddTicks(8796),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 669, DateTimeKind.Local).AddTicks(5024),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 669, DateTimeKind.Local).AddTicks(5026),
                             Email = "uviekelvin@gmail.com",
                             FirstName = "Odafe",
                             IsDeleted = false,
@@ -354,6 +354,9 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AvailableSpace")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -370,9 +373,6 @@ namespace Covid19Pcr.Infrastructure.Migrations
                     b.Property<long>("LabId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("SpaceAvailable")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("LabId");
@@ -383,42 +383,42 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            Date = new DateTime(2021, 11, 3, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(7880),
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(7858),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(7875),
+                            AvailableSpace = 0,
+                            Date = new DateTime(2021, 11, 8, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(4181),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(4156),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(4176),
                             IsDeleted = false,
-                            LabId = 1L,
-                            SpaceAvailable = 0
+                            LabId = 1L
                         },
                         new
                         {
                             Id = 2L,
-                            Date = new DateTime(2021, 11, 4, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9442),
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9427),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9436),
+                            AvailableSpace = 0,
+                            Date = new DateTime(2021, 11, 9, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5743),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5732),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5739),
                             IsDeleted = false,
-                            LabId = 2L,
-                            SpaceAvailable = 0
+                            LabId = 2L
                         },
                         new
                         {
                             Id = 3L,
-                            Date = new DateTime(2021, 11, 5, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9465),
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9461),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9463),
+                            AvailableSpace = 0,
+                            Date = new DateTime(2021, 11, 10, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5761),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5757),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5759),
                             IsDeleted = false,
-                            LabId = 3L,
-                            SpaceAvailable = 0
+                            LabId = 3L
                         },
                         new
                         {
                             Id = 4L,
-                            Date = new DateTime(2021, 11, 6, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9472),
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9468),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 466, DateTimeKind.Local).AddTicks(9470),
+                            AvailableSpace = 0,
+                            Date = new DateTime(2021, 11, 11, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5767),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5764),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 670, DateTimeKind.Local).AddTicks(5765),
                             IsDeleted = false,
-                            LabId = 3L,
-                            SpaceAvailable = 0
+                            LabId = 3L
                         });
                 });
 
@@ -450,8 +450,8 @@ namespace Covid19Pcr.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreated = new DateTime(2021, 11, 2, 23, 19, 1, 468, DateTimeKind.Local).AddTicks(2169),
-                            DateUpdated = new DateTime(2021, 11, 2, 23, 19, 1, 468, DateTimeKind.Local).AddTicks(2196),
+                            DateCreated = new DateTime(2021, 11, 7, 12, 27, 26, 671, DateTimeKind.Local).AddTicks(6327),
+                            DateUpdated = new DateTime(2021, 11, 7, 12, 27, 26, 671, DateTimeKind.Local).AddTicks(6348),
                             IsDeleted = false,
                             Name = "PCR Tests"
                         });
@@ -479,8 +479,11 @@ namespace Covid19Pcr.Infrastructure.Migrations
 
                     b.OwnsOne("Covid19Pcr.Domain.Models.TestResults", "TestResult", b1 =>
                         {
-                            b1.Property<long>("BookingId")
+                            b1.Property<long>("BookingsId")
                                 .HasColumnType("bigint");
+
+                            b1.Property<DateTime>("DateCreated")
+                                .HasColumnType("datetime2");
 
                             b1.Property<string>("Remarks")
                                 .HasColumnType("nvarchar(max)");
@@ -488,14 +491,12 @@ namespace Covid19Pcr.Infrastructure.Migrations
                             b1.Property<int>("ResultType")
                                 .HasColumnType("int");
 
-                            b1.HasKey("BookingId");
+                            b1.HasKey("BookingsId");
 
                             b1.ToTable("TestResults");
 
-                            b1.WithOwner("Booking")
-                                .HasForeignKey("BookingId");
-
-                            b1.Navigation("Booking");
+                            b1.WithOwner()
+                                .HasForeignKey("BookingsId");
                         });
 
                     b.Navigation("Patient");
@@ -510,7 +511,7 @@ namespace Covid19Pcr.Infrastructure.Migrations
             modelBuilder.Entity("Covid19Pcr.Domain.Models.Labs", b =>
                 {
                     b.HasOne("Covid19Pcr.Domain.Models.Locations", "Location")
-                        .WithMany()
+                        .WithMany("Labs")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -532,6 +533,11 @@ namespace Covid19Pcr.Infrastructure.Migrations
             modelBuilder.Entity("Covid19Pcr.Domain.Models.Labs", b =>
                 {
                     b.Navigation("TestDays");
+                });
+
+            modelBuilder.Entity("Covid19Pcr.Domain.Models.Locations", b =>
+                {
+                    b.Navigation("Labs");
                 });
 
             modelBuilder.Entity("Covid19Pcr.Domain.Models.Patients", b =>

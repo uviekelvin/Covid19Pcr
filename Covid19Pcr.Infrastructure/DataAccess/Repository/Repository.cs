@@ -34,7 +34,7 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
             return await query.FromSqlRaw(Sql, parameters).ToListAsync();
         }
 
-        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
+        public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
         {
             IQueryable<TEntity> query = dbSet;
 
@@ -50,10 +50,10 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
             if (orderBy != null)
                 query = orderBy(query);
 
-            return query;
+            return await query.ToListAsync();
         }
 
-        public async Task<TEntity> GetFirstOrDefault(Expression<Func<TEntity, bool>> filter = null, params Expression<Func<TEntity, object>>[] includes)
+        public async Task<TEntity> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> filter = null, params Expression<Func<TEntity, object>>[] includes)
         {
             IQueryable<TEntity> query = dbSet;
 

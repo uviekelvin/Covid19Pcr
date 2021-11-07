@@ -1,3 +1,4 @@
+using Covid19Pcr.API.Filters;
 using Covid19Pcr.Application;
 using Covid19Pcr.Application.Interfaces;
 using Covid19Pcr.Infrastructure.DataAccess;
@@ -36,15 +37,29 @@ namespace Covid19Pcr.API
             services.AddMediatRDependency();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUnitofWork, UnitofWork>();
-
+            services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddDbContext<Covid19PcrContext>(options =>
             {
                 options.UseSqlServer(this.Configuration.GetConnectionString("DbConnection"),
                     x => x.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
             });
 
-            services.AddControllers()
-                 .AddFluentValidation();
+            services.AddControllers(opt =>
+            {
+                opt.Filters.Add(typeof(GlobalExceptionFilter));
+
+            }).AddFluentValidation();
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("*");
+                });
+            });
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Covid19Pcr.API", Version = "v1" });
@@ -63,6 +78,7 @@ namespace Covid19Pcr.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

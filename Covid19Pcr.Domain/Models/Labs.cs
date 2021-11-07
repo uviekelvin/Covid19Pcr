@@ -1,5 +1,6 @@
 ﻿
 using Covid19Pcr.Domain.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,14 +27,20 @@ namespace Covid19Pcr.Domain.Models
 
         public void AllocateSpace(long testDayId)
         {
-            var availableSpace = this.TestDays.FirstOrDefault(x => x.Id == testDayId);
-            if (availableSpace == null)
+            var testDay = this.TestDays.FirstOrDefault(x => x.Id == testDayId);
+            if (testDay == null)
                 throw new DomainException("No Availabe Space found");
 
-            if (availableSpace.SpaceAvailable == 0)
+            if (testDay.AvailableSpace == 0)
                 throw new DomainException("All spaces are fully booked");
 
-            availableSpace.BookSpace();
+            testDay.BookSpace();
+        }
+
+        public void AddTestDays(DateTime date, int availableSpace)
+        {
+            var testDay = new TestDays(date, availableSpace);
+            this._testDays.Add(testDay);
         }
     }
 }

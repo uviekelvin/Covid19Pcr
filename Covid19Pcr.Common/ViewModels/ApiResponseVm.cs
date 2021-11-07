@@ -11,13 +11,6 @@ namespace Covid19Pcr.Common.ViewModels
     public class ApiResponse
     {
         public ApiResponseCodes Code { get; set; }
-        public int Result
-        {
-            get
-            {
-                return (int)Code;
-            }
-        }
         public string Message { get; set; }
     }
 
@@ -25,14 +18,11 @@ namespace Covid19Pcr.Common.ViewModels
     {
         public T Data { get; set; } = default(T);
         public int TotalCount { get; set; }
-        public string Description { get; set; }
-
         public List<string> ErrorList = new List<string>();
         public ApiResponse(T result, ApiResponseCodes responseCode, string message, List<string> validationMessages = null)
         {
             Data = result;
             Message = message;
-            Description = message;
             Code = responseCode;
             ErrorList = validationMessages;
         }
