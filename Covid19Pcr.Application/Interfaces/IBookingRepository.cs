@@ -13,6 +13,6 @@ namespace Covid19Pcr.Application.Interfaces
     {
 
         public ApiResponse<IEnumerable<BookingVm>> GetBookings(DateTime from, DateTime to, int page, int pageSize);
-        public ApiResponse<IEnumerable<TestResultVm>> GetTestResults(int page, int pageSize, LabResultTypes? resultType);
+        public ApiResponse<IEnumerable<TestResultVm>> GetTestResults(int page, int pageSize, int? resultType);
     }
 }

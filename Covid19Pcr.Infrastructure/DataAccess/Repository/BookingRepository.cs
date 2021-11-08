@@ -37,14 +37,13 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
             return apiResponse;
         }
 
-        public ApiResponse<IEnumerable<TestResultVm>> GetTestResults(int page, int pageSize, LabResultTypes? resultType)
+        public ApiResponse<IEnumerable<TestResultVm>> GetTestResults(int page, int pageSize, int? resultType)
         {
             SqlParameter param1 = new SqlParameter("@pageindex", page);
             SqlParameter param2 = new SqlParameter("@pagesize", pageSize);
-            SqlParameter param3 = new SqlParameter("@resultType", !resultType.HasValue ? null : resultType.Value);
+            SqlParameter param3 = new SqlParameter("@resultType", resultType ?? 0);
             SqlParameter param4 = new SqlParameter("@totalCount", System.Data.SqlDbType.Int);
             param4.Direction = System.Data.ParameterDirection.Output;
-            param3.IsNullable = true;
             var testResults = this._unitOfWork.Repository<TestResultVm>().SqlQuery<TestResultVm>($"EXEC sp_getTestResults {param1},{param2},{param3},@totalCount out", param1, param2, param3, param4);
 
             var apiResponse = new ApiResponse<IEnumerable<TestResultVm>>();
