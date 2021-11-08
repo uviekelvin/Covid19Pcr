@@ -16,7 +16,7 @@ namespace Covid19Pcr.Application.Queries
 {
     public class GetTestResultsQuery : IRequest<ApiResponse<IEnumerable<TestResultVm>>>
     {
-        public int Page { get; set; } =1;
+        public int Page { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public int? ResultType { get; set; }
     }
@@ -24,20 +24,18 @@ namespace Covid19Pcr.Application.Queries
 
     public class GetTestResultsQueryHandler : IRequestHandler<GetTestResultsQuery, ApiResponse<IEnumerable<TestResultVm>>>
     {
-        private readonly IUnitofWork _unitOfWork;
-        private readonly IMapper _mapper;
+
         private readonly IBookingRepository _bookingRepository;
 
-        public GetTestResultsQueryHandler(IUnitofWork unitofWork, IMapper mapper, IBookingRepository bookingRepository)
+        public GetTestResultsQueryHandler(IBookingRepository bookingRepository)
         {
-            this._unitOfWork = unitofWork;
-            this._mapper = mapper;
+
             this._bookingRepository = bookingRepository;
         }
 
         public async Task<ApiResponse<IEnumerable<TestResultVm>>> Handle(GetTestResultsQuery request, CancellationToken cancellationToken)
         {
-            return  await Task.FromResult(this._bookingRepository.GetTestResults(request.Page, request.PageSize, request.ResultType));
+            return await Task.FromResult(this._bookingRepository.GetTestResults(request.Page, request.PageSize, request.ResultType));
 
         }
     }
