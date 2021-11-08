@@ -37,7 +37,7 @@ namespace Covid19Pcr.Application.Queries
 
         public async Task<ApiResponse<IEnumerable<TestResultVm>>> Handle(GetTestResultsQuery request, CancellationToken cancellationToken)
         {
-            return this._bookingRepository.GetTestResults(request.Page, request.PageSize, request.ResultType);
+            return  await Task.FromResult(this._bookingRepository.GetTestResults(request.Page, request.PageSize, request.ResultType));
 
         }
     }

@@ -36,14 +36,7 @@ namespace Covid19Pcr.Application.Queries
 
         public async Task<ApiResponse<IEnumerable<BookingVm>>> Handle(GetBookingsQuery request, CancellationToken cancellationToken)
         {
-
-            //var bookings = await this._unitOfWork.Repository<Bookings>()
-            //    .GetAllAsync(x => x.DateCreated.Date >= request.From.Date &&
-            //    x.DateCreated.Date <= request.To.Date, null,
-            //    x => x.TestDay, x => x.TestDay.Lab, x => x.TestDay.Lab.Location, x => x.TestType, p => p.Patient);
-
-
-            return this._bookingRepository.GetBookings(request.From, request.To, request.Page, request.PageSize);
+            return await Task.FromResult(this._bookingRepository.GetBookings(request.From, request.To, request.Page, request.PageSize));
         }
     }
 }
