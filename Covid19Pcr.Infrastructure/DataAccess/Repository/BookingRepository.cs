@@ -23,8 +23,8 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
         public ApiResponse<IEnumerable<BookingVm>> GetBookings(DateTime from, DateTime to, int page, int pageSize)
         {
 
-            SqlParameter param1 = new SqlParameter("@startDate", from.Date.ToString("yyyy-MMM-dd"));
-            SqlParameter param2 = new SqlParameter("@endDate", to.Date.ToString("yyyy-MMM-dd"));
+            SqlParameter param1 = new SqlParameter("@startDate", from.Date);
+            SqlParameter param2 = new SqlParameter("@endDate", to.Date);
             SqlParameter param3 = new SqlParameter("@pageindex", page);
             SqlParameter param4 = new SqlParameter("@pagesize", pageSize);
             SqlParameter param5 = new SqlParameter("@totalCount", System.Data.SqlDbType.Int);
