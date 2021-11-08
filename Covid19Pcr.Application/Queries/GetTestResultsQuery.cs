@@ -16,8 +16,8 @@ namespace Covid19Pcr.Application.Queries
 {
     public class GetTestResultsQuery : IRequest<ApiResponse<IEnumerable<TestResultVm>>>
     {
-        public int Page { get; set; }
-        public int PageSize { get; set; }
+        public int Page { get; set; } =1;
+        public int PageSize { get; set; } = 10;
         public LabResultTypes? ResultType { get; set; }
     }
 
@@ -26,21 +26,18 @@ namespace Covid19Pcr.Application.Queries
     {
         private readonly IUnitofWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IBookingRepository _bookingRepository;
 
-        public GetTestResultsQueryHandler(IUnitofWork unitofWork, IMapper mapper)
+        public GetTestResultsQueryHandler(IUnitofWork unitofWork, IMapper mapper, IBookingRepository bookingRepository)
         {
             this._unitOfWork = unitofWork;
             this._mapper = mapper;
+            this._bookingRepository = bookingRepository;
         }
 
         public async Task<ApiResponse<IEnumerable<TestResultVm>>> Handle(GetTestResultsQuery request, CancellationToken cancellationToken)
         {
-            var testResultsQuery = await this._unitOfWork.Repository<Bookings>()
-                .GetAllAsync(x => x.Status == BookingStatus.Completed || (request.ResultType.HasValue
-                 && x.TestResult.ResultType == request.ResultType.Value), null,
-                x => x.TestDay, x => x.TestDay.Lab, x => x.TestDay.Lab.Location, p => p.Patient);
-
-            return ResponseMessage.SuccessMessage(this._mapper.Map<IEnumerable<TestResultVm>>(testResultsQuery));
+            return this._bookingRepository.GetTestResults(request.Page, request.PageSize, request.ResultType);
 
         }
     }

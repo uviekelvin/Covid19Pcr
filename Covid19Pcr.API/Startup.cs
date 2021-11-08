@@ -38,6 +38,7 @@ namespace Covid19Pcr.API
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUnitofWork, UnitofWork>();
             services.AddScoped<IPatientRepository, PatientRepository>();
+            services.AddScoped<IBookingRepository, BookingRepository>();
             services.AddDbContext<Covid19PcrContext>(options =>
             {
                 options.UseSqlServer(this.Configuration.GetConnectionString("DbConnection"),

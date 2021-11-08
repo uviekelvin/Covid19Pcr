@@ -23,7 +23,6 @@ namespace Covid19Pcr.Application.ViewModels
         public string Lab { get; set; }
         public string Location { get; set; }
 
-        public BookingStatus Status { get; set; }
-        public TestResults TestResult { get; set; }
+        public string Status { get; set; }
     }
 }
