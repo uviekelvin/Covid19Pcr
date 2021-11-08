@@ -28,7 +28,8 @@ namespace Covid19Pcr.Infrastructure.DataAccess.EntityConfigurations
                     Id=1,
                     TestDayId=1,
                     PatientId=1,
-                    TestTypeId=1
+                    TestTypeId=1,
+                    Status= BookingStatus.Booked
                 },
                 new Bookings
                 {
@@ -36,7 +37,8 @@ namespace Covid19Pcr.Infrastructure.DataAccess.EntityConfigurations
                     Id=2,
                     TestDayId=2,
                     PatientId=2,
-                    TestTypeId=1
+                    TestTypeId=1,
+                    Status= BookingStatus.Booked
                 },
                 new Bookings
                 {
@@ -44,14 +46,16 @@ namespace Covid19Pcr.Infrastructure.DataAccess.EntityConfigurations
 
                     TestDayId=2,
                     PatientId=2,
-                    TestTypeId=1
+                    TestTypeId=1,
+                    Status= BookingStatus.Booked
                 },
                 new Bookings
                 {
                   Id=4,
                   TestDayId=3,
                   TestTypeId=1,
-                  PatientId=3
+                  PatientId=3,
+                  Status= BookingStatus.Booked
                 }
 
             });

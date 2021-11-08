@@ -19,27 +19,31 @@ namespace Covid19Pcr.Infrastructure.DataAccess.EntityConfigurations
 
                     Id=1,
                     Date= DateTime.Now.AddDays(1),
-                    LabId=1
+                    LabId=1,
+                     AvailableSpace=1
                 },
                 new TestDays
                 {
 
                     Id=2,
                   Date= DateTime.Now.AddDays(2),
-                  LabId=2
+                  LabId=2,
+                   AvailableSpace=1
                 },
                 new TestDays
                 {
                     Id=3,
 
                    Date= DateTime.Now.AddDays(3),
-                   LabId=3
+                   LabId=3,
+                    AvailableSpace=1
                 },
                 new TestDays
                 {
                   Id=4,
                   Date=DateTime.Now.AddDays(4),
-                  LabId=3
+                  LabId=3,
+                  AvailableSpace=1
                 }
 
             });
