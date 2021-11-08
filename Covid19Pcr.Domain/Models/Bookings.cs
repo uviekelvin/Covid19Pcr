@@ -60,9 +60,19 @@ namespace Covid19Pcr.Domain.Models
             if (this.Status == BookingStatus.Cancelled || this.Status == BookingStatus.Completed)
                 throw new DomainException($"Test result cannot be added for a {this.Status} booking");
             if (this.TestDay.Date.Date != DateTime.Now.Date)
-                throw new DomainException($"The scheduled test date is not the same as today");
+                throw new DomainException($"The scheduled date for this test is not the same as today");
             this.TestResult = new TestResults(resultType, remarks);
             this.TestDay.FreeSpace();
+            this.Status = BookingStatus.Completed;
+        }
+
+        public void ViewTestResult()
+        {
+            if (this.Status == BookingStatus.Cancelled)
+                throw new DomainException("This booking was cancelled");
+            if (this.Status == BookingStatus.Booked)
+                throw new DomainException("Test Result not yet ready");
+
         }
     }
 

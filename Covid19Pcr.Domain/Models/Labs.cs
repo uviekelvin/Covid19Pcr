@@ -39,6 +39,8 @@ namespace Covid19Pcr.Domain.Models
 
         public void AddTestDays(DateTime date, int availableSpace)
         {
+            if (this.TestDays.Any(a => a.Date.Date == date.Date))
+                throw new DomainException("There is already an allocated space for this day.");
             var testDay = new TestDays(date, availableSpace);
             this._testDays.Add(testDay);
         }

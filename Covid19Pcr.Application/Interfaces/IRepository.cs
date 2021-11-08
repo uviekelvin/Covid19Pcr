@@ -19,7 +19,7 @@ namespace Covid19Pcr.Application.Interfaces
             Expression<Func<TEntity, bool>> filter = null,
             params Expression<Func<TEntity, object>>[] includes);
         Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
-        Task<IEnumerable<TEntity>> FromSQL(string Sql, params object[] parameters);
+        IEnumerable<T> SqlQuery<T>(String sql, params object[] parameters) where T : new();
         Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate);
 
     }

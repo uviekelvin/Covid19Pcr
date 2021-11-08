@@ -58,5 +58,14 @@ namespace Covid19Pcr.API.Controllers
         {
             return CustomResponse(await this.Mediator.Send(getBookingsQuery));
         }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(ApiResponse<IEnumerable<TestResultVm>>), 200)]
+        public async Task<IActionResult> GetTestResults([FromBody] GetTestResultQuery getTestResultQuery)
+        {
+
+            return CustomResponse(await this._mediator.Send(getTestResultQuery));
+        }
+
     }
 }

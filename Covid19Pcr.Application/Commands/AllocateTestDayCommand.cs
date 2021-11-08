@@ -30,12 +30,12 @@ namespace Covid19Pcr.Application.Commands
 
         public async Task<ApiResponse<TestDaysWithLocationVm>> Handle(AllocateTestDayCommand request, CancellationToken cancellationToken)
         {
-            var Lab = await this._unitOfWork.Repository<Labs>().GetFirstOrDefaultAsync(x => x.Id == request.LabId, x => x.Location);
+            var Lab = await this._unitOfWork.Repository<Labs>().GetFirstOrDefaultAsync(x => x.Id == request.LabId, x => x.Location, x => x.TestDays);
 
             if (Lab == null)
                 return ResponseMessage.ErrorMessage<TestDaysWithLocationVm>("Test Lab not found");
             Lab.AddTestDays(request.Date, request.AvailableSpace);
-
+            await this._unitOfWork.Complete();
             return ResponseMessage.SuccessMessage(new TestDaysWithLocationVm
             {
                 Id = Lab.TestDays.LastOrDefault().Id,

@@ -13,25 +13,25 @@ using System.Threading.Tasks;
 
 namespace Covid19Pcr.Application.Queries
 {
-    public class GetTestDaysQuery : IRequest<ApiResponse<IEnumerable<TestDaysWithLocationVm>>>
+    public class GetBookingCapacityQuery : IRequest<ApiResponse<IEnumerable<TestDaysWithLocationVm>>>
     {
         public int Page { get; set; }
 
         public int PageSize { get; set; }
     }
 
-    public class GetTestDaysQueryHandler : IRequestHandler<GetTestDaysQuery, ApiResponse<IEnumerable<TestDaysWithLocationVm>>>
+    public class GetBookingCapacityQueryHandler : IRequestHandler<GetBookingCapacityQuery, ApiResponse<IEnumerable<TestDaysWithLocationVm>>>
     {
         private readonly IUnitofWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public GetTestDaysQueryHandler(IUnitofWork unitofWork, IMapper mapper)
+        public GetBookingCapacityQueryHandler(IUnitofWork unitofWork, IMapper mapper)
         {
             this._unitOfWork = unitofWork;
             this._mapper = mapper;
         }
 
-        public async Task<ApiResponse<IEnumerable<TestDaysWithLocationVm>>> Handle(GetTestDaysQuery request, CancellationToken cancellationToken)
+        public async Task<ApiResponse<IEnumerable<TestDaysWithLocationVm>>> Handle(GetBookingCapacityQuery request, CancellationToken cancellationToken)
         {
             var testDays = await this._unitOfWork.Repository<TestDays>().GetAllAsync(null, null, x => x.Lab, l => l.Lab.Location);
             return ResponseMessage.SuccessMessage(_mapper.Map<IEnumerable<TestDaysWithLocationVm>>(testDays));

@@ -15,8 +15,8 @@ namespace Covid19Pcr.Application.Queries
 {
     public class GetBookingsQuery : IRequest<ApiResponse<IEnumerable<BookingVm>>>
     {
-        public DateTime From { get; set; }
-        public DateTime To { get; set; }
+        public DateTime From { get; set; } = DateTime.Now.AddMonths(-1);
+        public DateTime To { get; set; } = DateTime.Now;
         public int Page { get; set; }
         public int PageSize { get; set; }
     }
@@ -37,8 +37,8 @@ namespace Covid19Pcr.Application.Queries
 
             var bookings = await this._unitOfWork.Repository<Bookings>()
                 .GetAllAsync(x => x.DateCreated.Date >= request.From.Date &&
-                x.DateCreated.Date <= request.From.Date, null,
-                x => x.TestDay, x => x.TestDay.Lab, x => x.TestDay.Lab.Location, x => x.TestType);
+                x.DateCreated.Date <= request.To.Date, null,
+                x => x.TestDay, x => x.TestDay.Lab, x => x.TestDay.Lab.Location, x => x.TestType, p => p.Patient);
             return ResponseMessage.SuccessMessage(this._mapper.Map<IEnumerable<BookingVm>>(bookings));
         }
     }

@@ -19,6 +19,9 @@ namespace Covid19Pcr.Domain.Models
 
             if (availableSpace == 0)
                 throw new DomainException("Please select a valid available space");
+
+            this.Date = date;
+            this.AvailableSpace = availableSpace;
         }
         public void BookSpace()
         {
@@ -30,6 +33,10 @@ namespace Covid19Pcr.Domain.Models
         public void FreeSpace()
         {
             this.AvailableSpace++;
+        }
+        public void AddMoreSpace(int space)
+        {
+            this.AvailableSpace = this.AvailableSpace + space;
         }
     }
 }

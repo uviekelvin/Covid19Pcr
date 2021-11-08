@@ -1,4 +1,5 @@
-﻿using Covid19Pcr.Domain.Models;
+﻿using Covid19Pcr.Domain.Enums;
+using Covid19Pcr.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace Covid19Pcr.Application.ViewModels
         public string Lab { get; set; }
         public string Location { get; set; }
 
+        public BookingStatus Status { get; set; }
         public TestResults TestResult { get; set; }
     }
 }

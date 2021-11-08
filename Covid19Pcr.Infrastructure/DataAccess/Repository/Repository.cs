@@ -1,4 +1,5 @@
 ﻿using Covid19Pcr.Application.Interfaces;
+using Covid19Pcr.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -28,10 +29,9 @@ namespace Covid19Pcr.Infrastructure.DataAccess.Repository
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<TEntity>> FromSQL(string Sql, params object[] parameters)
+        public virtual IEnumerable<T> SqlQuery<T>(string sql, params object[] parameters) where T : new()
         {
-            var query = dbSet;
-            return await query.FromSqlRaw(Sql, parameters).ToListAsync();
+            return context.Database.GetModelFromQuery<T>(sql, parameters);
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
