@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Pcr.Domain", "Covid19Pcr.Domain\Covid19Pcr.Domain.csproj", "{C1ABE3E7-9DA7-4432-9EFB-89FB4E926FA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Pcr.Domain", "Covid19Pcr.Domain\Covid19Pcr.Domain.csproj", "{C1ABE3E7-9DA7-4432-9EFB-89FB4E926FA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Pcr.Application", "Covid19Pcr.Application\Covid19Pcr.Application.csproj", "{85599294-096F-4768-9B29-EFCA3D6218CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Pcr.Application", "Covid19Pcr.Application\Covid19Pcr.Application.csproj", "{85599294-096F-4768-9B29-EFCA3D6218CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Pcr.Infrastructure", "Covid19Pcr.Infrastructure\Covid19Pcr.Infrastructure.csproj", "{893407F7-4305-41C8-AA3B-B09EF7BFD2FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Pcr.Infrastructure", "Covid19Pcr.Infrastructure\Covid19Pcr.Infrastructure.csproj", "{893407F7-4305-41C8-AA3B-B09EF7BFD2FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Pcr.API", "Covid19Pcr.API\Covid19Pcr.API.csproj", "{1689B7B2-F4C0-4D79-8B82-FC6628B1D081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Pcr.API", "Covid19Pcr.API\Covid19Pcr.API.csproj", "{1689B7B2-F4C0-4D79-8B82-FC6628B1D081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Pcr.Common", "Covid19Pcr.Common\Covid19Pcr.Common.csproj", "{5A56B727-9D6A-42E7-9788-FB59A721DA59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Pcr.Common", "Covid19Pcr.Common\Covid19Pcr.Common.csproj", "{5A56B727-9D6A-42E7-9788-FB59A721DA59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidPcr.Tests", "CovidPcr.Tests\CovidPcr.Tests.csproj", "{7A10E181-876B-41B5-B38D-0CFAEF56D5CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5A56B727-9D6A-42E7-9788-FB59A721DA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A56B727-9D6A-42E7-9788-FB59A721DA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A56B727-9D6A-42E7-9788-FB59A721DA59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A10E181-876B-41B5-B38D-0CFAEF56D5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A10E181-876B-41B5-B38D-0CFAEF56D5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A10E181-876B-41B5-B38D-0CFAEF56D5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A10E181-876B-41B5-B38D-0CFAEF56D5CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
